@@ -6,6 +6,14 @@ from sqlalchemy import create_engine
 Base = declarative_base()
 
 class Knowledge(Base):
+	__tablename__='info'
+	student_id = Column(Integer, primary_key=True)
+	fav_nickname = Column(string)
+	fav_prehistoric_animal = Column(string)
+	glove_size = Column(Integer)
+	rating = Column(Integer)
+	
+
 	# Create a table with 4 columns
 	# The first column will be the primary key
 	# The second column should be a string representing
